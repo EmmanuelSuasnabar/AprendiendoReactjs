@@ -1,0 +1,13 @@
+.lista {
+    list-style-type: none;
+    display: flex;
+}
+
+.listaProductos {
+    margin: 0px 5px;
+    border: 2px solid red;
+    border-radius: 50px;
+    
+
+
+}
