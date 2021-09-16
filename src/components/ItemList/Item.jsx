@@ -8,8 +8,8 @@ const Item = ({joya}) => {
           <div className='card-body'>
               <img src={joya.picture} alt='picture' />
           </div>
-          <div className="card-footer"
-              <button className='btn btn-outline-primary btn-block"> Detalles </button>
+          <div className="card-footer">
+              <button className="btn btn-outline-primary btn-block"> Detalles </button>
           </div>
     </div>
 
