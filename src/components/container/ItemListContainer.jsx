@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react'
-import {getFetch} from '../utils/Mock'
+import {getFetch} from '../../utils/Mock'
 import ItemCount from '/components/ItemCount'
-import ItemList from '../components/ItemList'
+import ItemList from '../ItemList/ItemList'
 
 
 function ItemListContainer ({Saludo}) {

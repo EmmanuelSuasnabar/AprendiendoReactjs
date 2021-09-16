@@ -19,3 +19,14 @@ export const getFech = new Promise((res, rej) => {
 }
 
 });
+
+
+const joya = {id:2, nombre: Anillo , picture:"./src/images/anillos.jpg" }
+
+export const getFetchOne = new Promise((resolve)=>{ 
+
+setTimeout(()=>{
+    resolve(joya)
+}, 2000)
+
+})

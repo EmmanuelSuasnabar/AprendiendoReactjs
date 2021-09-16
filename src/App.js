@@ -5,6 +5,7 @@ import  {NavBar} from './components/NavBar'
 import {ItemListContainer} from './components/ItemListContainer'
 import  {CartWidget} from "./components/CartWidget"
 import {ItemCount} from './components/ItemCount';
+import ItemDetailContainer from './components/container/ItemDetailContainer';
 
 
 
@@ -27,7 +28,7 @@ function App() {
         <NavBar productos={["Anillos","Aros","Cadenas","Pulceras"]}/>
         
         <ItemListContainer Saludo={'hola soy itemListContainer'} />
-        
+        <ItemDetailContainer/>
       </header>
       <CartWidget/>
     </div>
