@@ -1,11 +1,19 @@
-import React from 'react'
+import 'App'
+import ItemCount from './ItemCount'
 
-export const ItemListContainer = (props) => {
+function ItemListContainer ({Saludo}) {
+
+    const onAdd = (cant) =>{
+        console.log(cant)
+    }
+
     return (
         <div>
-            <p>{props.Saludo}</p>
+          <h1><p>{Saludo}</p></h1>
+          <ItemCount stock={8} initial={} onAdd={onAdd}/>
         </div>
     )
 }
 
 
+export default ItemListContainer

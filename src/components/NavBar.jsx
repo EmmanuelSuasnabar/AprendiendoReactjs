@@ -1,24 +1,26 @@
+import '../App'
 
-
-export const NavBar =(props) => {
+const NavBar =(productos) => {
     return (
         <div>
+        <NavBar>
         <nav>
         <ul className="lista">
 
 
-            <li classname="listaProductos">{props.productos[0]}</li>
-            <li classname="listaProductos">{props.productos[1]}</li>
-            <li classname="listaProductos">{props.productos[2]}</li>
-            <li classname="listaProductos">{props.productos[3]}</li>
+            <li classname="listaProductos">{productos[0]}</li>
+            <li classname="listaProductos">{productos[1]}</li>
+            <li classname="listaProductos">{productos[2]}</li>
+            <li classname="listaProductos">{productos[3]}</li>
 
         </ul>    
-
         </nav>
+        <CartWidget/>
+        </NavBar>
 
         </div>
     )
 }
 
 
-
+export default NavBar

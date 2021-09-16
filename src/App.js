@@ -2,8 +2,11 @@ import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import  {NavBar} from './components/NavBar'
-import  {CartWidget} from "./components/CartWidget"
 import {ItemListContainer} from './components/ItemListContainer'
+import  {CartWidget} from "./components/CartWidget"
+import {ItemCount} from './components/ItemCount';
+
+
 
 function App() {
   return (
@@ -21,13 +24,16 @@ function App() {
         >
           Learn React
         </a>
-        <NavBar productos={["Anillos","Aros","Cadenas","Pulceras"]}>
-          <ItemListContainer/>
-        </NavBar>
-        <p saludo={"greetings"}></p>
+        <NavBar productos={["Anillos","Aros","Cadenas","Pulceras"]}/>
+        
+        <ItemListContainer Saludo={'hola soy itemListContainer'} />
+        
       </header>
+      <CartWidget/>
     </div>
   );
 }
 
-export default App;
+
+
+export default App
