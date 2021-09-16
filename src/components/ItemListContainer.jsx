@@ -1,16 +1,33 @@
-import 'App'
-import ItemCount from './ItemCount'
+import {useState, useEffect} from 'react'
+import {getFetch} from '../utils/Mock'
+import ItemCount from '/components/ItemCount'
+import ItemList from '../components/ItemList'
+
 
 function ItemListContainer ({Saludo}) {
+    const [joyas, setJoyas] = useState([])
+    const [loading,setLoading] = useState(true)
 
     const onAdd = (cant) =>{
         console.log(cant)
     }
 
+    useEffect(()=>{
+        getFetch.then(respuesta =>{
+            setJoyas(respuesta)
+        })
+        .catch(error => console.log(error))
+        .finally(()=> setLoading(false))
+
+    })
+
     return (
+        
+ 
         <div>
           <h1><p>{Saludo}</p></h1>
-          <ItemCount stock={8} initial={} onAdd={onAdd}/>
+          { loading ? <h2>Cargando...</h2> : <itemList joyas={joyas}/>}
+          <ItemCount stock={8} initial={1} onAdd={onAdd}/>
         </div>
     )
 }

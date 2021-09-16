@@ -5,12 +5,16 @@ const ItemCount = ({stock, initial, onAdd}) => {
     const [count, setCount] = useState(initial)
 
     function Sumar(){
+        if(count<stock){  
         setCount(count + 1)
         
+     }
     }
     function Restar(){
+        if(count>1) { 
         setCount(count - 1)
 
+     }
     }
     const agregarCarrito = ()=>{
         onAdd(count)
